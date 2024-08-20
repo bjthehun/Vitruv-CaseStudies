@@ -21,24 +21,15 @@ import static extension edu.kit.ipd.sdq.commons.util.org.eclipse.emf.ecore.resou
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.AfterAll
 import java.io.File
+import java.util.stream.Stream
+import org.junit.jupiter.params.provider.Arguments
+import org.junit.jupiter.params.provider.MethodSource
 
 class JavaToUmlConstructionPerformanceTest extends AbstractUmlToJavaTest {
-	static val RESOURCES_FOLDER = "resources/"
-	static val RESULTS_FOLDER = "results/"
-	static val timeRecorder = new ConsistencyPreservationTimeRecorder
-	
-	override void setup() {
-		super.setup
-	}
-
-	@BeforeEach
-	def void setup2() {
-		this.viewFactory.autoClose = false
-		this.virtualModel.addChangePropagationListener(timeRecorder)
-	}
-	
-	@ParameterizedTest
-	@ValueSource(strings=#[
+	/**
+	 * UML files that we reconstruct; paths relatives to {@link RESOURCES_FOLDER}
+	 */
+	static val UMLFiles = newArrayList(
 		"mediastore/MediaStore_1_Packages",
 		"mediastore/MediaStore_2_ClassAndInterfaceStubs",
 		"mediastore/MediaStore_3_CompositeDataTypes",
@@ -49,14 +40,46 @@ class JavaToUmlConstructionPerformanceTest extends AbstractUmlToJavaTest {
 		"synthetic/model2",
 		"suresh519/uml/MyProject", // UML model from "myproject" by suresh519: https://repository.genmymodel.com/suresh519/MyProject (12.5.2017)
 		"orhanobut/uml/model" // UML model from the logger project by orhan obut:  https://github.com/orhanobut/logger (12.5.2017)
-	])
-	def void measurePerformance(String modelFileName) {
-		transformUmlModelAndValidateJavaCode(RESOURCES_FOLDER,  modelFileName + "." + MODEL_FILE_EXTENSION)
-	}
+	)
 	
-	def void transformUmlModelAndValidateJavaCode(String modelPath, String modelName) {
+	static val RESOURCES_FOLDER = "resources/"
+	static val RESULTS_FOLDER = "results/"
+	static val timeRecorder = new ConsistencyPreservationTimeRecorder
+	
+	override void setup() {
+		super.setup
+	}
+
+	/**
+	 * Additional setup to install the time recorder.
+	 */
+	@BeforeEach
+	def void setup2() {
+		this.viewFactory.autoClose = false
+		this.virtualModel.addChangePropagationListener(timeRecorder)
+	}
+
+	/**
+	 * Creates an argument stream for performance tests:
+	 * 
+	 * <ol>
+	 * 	<li>Return all UMLFiles for warm-up phase.</li>
+	 * 	<li>Return them again for measurement phase.</li>
+	 * </ol>
+	 */
+	static def Stream<Arguments> argumentsForPerformanceTest() {
+		val warmUp = UMLFiles.map[it | Arguments.of(it, false)].stream
+		val measure = UMLFiles.map[it | Arguments.of(it, true)].stream
+		Stream.concat(warmUp, measure)
+	}
+
+	@ParameterizedTest
+	@MethodSource("argumentsForPerformanceTest")
+	def void measurePerformance(String modelFileName, boolean measure) {
+		timeRecorder.measure = measure
+		
 		val resourceSet = new ResourceSetImpl()
-		val resource = resourceSet.getResource(URI.createFileURI(modelPath + modelName), true)
+		val resource = resourceSet.getResource(URI.createFileURI(RESOURCES_FOLDER + modelFileName + ".uml"), true)
 		val model = resource.firstRootEObject as Model => [
 			name = UML_MODEL_NAME
 		]
@@ -89,23 +112,42 @@ class JavaToUmlConstructionPerformanceTest extends AbstractUmlToJavaTest {
  * @author Benedikt Jutz
  */
 class ConsistencyPreservationTimeRecorder implements ChangePropagationListener {
+	/**
+	 * Records
+	 */
 	val List<Quadruple<Long, Integer, Long, Long>> timestamps = new LinkedList; 
 	
 	var long step = 0;
 	var long startTime;
 	var VitruviusChange<Uuid> change;
+	/**
+	 * Are we in the measurement phase, or warm-up phase (measure = false)?
+	 * In the latter case, do not record measurements.
+	 */
+	boolean measure
+
+	def setMeasure(boolean measure) {
+		this.measure = measure
+	}
 
 	def clear() {
 		timestamps.clear
 	} 
+
 	
 	override finishedChangePropagation(Iterable<PropagatedChange> propagatedChanges) {
 		val timeNow = System.nanoTime
+		if (!measure) {
+			return
+		}
 		timestamps.add(new Quadruple(step, change.EChanges.size, startTime, timeNow))
 		step++
 	}
 	
 	override startedChangePropagation(VitruviusChange<Uuid> changeToPropagate) {
+		if (!measure) {
+			return
+		}
 		startTime = System.nanoTime
 		change = changeToPropagate
 	}
