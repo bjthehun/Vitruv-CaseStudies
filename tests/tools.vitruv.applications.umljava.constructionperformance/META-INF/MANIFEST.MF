@@ -1,9 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Vitruv UML-Java Tests
-Bundle-SymbolicName: tools.vitruv.applications.umljava.tests
-Automatic-Module-Name: tools.vitruv.applications.umljava.tests
+Bundle-Name: UML-to-Java Construction Performance Tests
+Bundle-SymbolicName: tools.vitruv.applications.umljava.constructionperformance
+Bundle-Vendor: vitruv.tools
 Bundle-Version: 3.0.1.qualifier
+Automatic-Module-Name: tools.vitruv.applications.umljava.constructionperformance
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: org.junit.jupiter.api,
  org.junit.jupiter.api.extension,
@@ -20,10 +21,5 @@ Require-Bundle: tools.vitruv.applications.umljava,
  org.apache.log4j,
  org.emftext.language.java.resource.java,
  org.emftext.language.java.resource,
- tools.vitruv.applications.testutility
-Bundle-ClassPath: .,
- target/dependency/json.jar
-Bundle-Vendor: vitruv.tools
-Export-Package: tools.vitruv.applications.umljava.tests,
- tools.vitruv.applications.umljava.tests.uml2java,
- tools.vitruv.applications.umljava.tests.util
+ tools.vitruv.applications.testutility,
+ tools.vitruv.applications.umljava.tests
