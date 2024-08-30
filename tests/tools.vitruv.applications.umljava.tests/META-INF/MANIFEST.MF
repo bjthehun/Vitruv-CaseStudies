@@ -24,6 +24,4 @@ Require-Bundle: tools.vitruv.applications.umljava,
 Bundle-ClassPath: .,
  target/dependency/json.jar
 Bundle-Vendor: vitruv.tools
-Export-Package: tools.vitruv.applications.umljava.tests,
- tools.vitruv.applications.umljava.tests.uml2java,
- tools.vitruv.applications.umljava.tests.util
+Export-Package: tools.vitruv.applications.umljava.tests.util

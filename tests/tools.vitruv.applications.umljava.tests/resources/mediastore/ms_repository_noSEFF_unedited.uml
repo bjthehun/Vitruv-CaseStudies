@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_R6JhIGBXEe-Lz9cVRDpg1g" name="umlrootmodel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_R6JhIWBXEe-Lz9cVRDpg1g" name="defaultRepository">
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6KvemBXEe-Lz9cVRDpg1g" name="datatypes">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6LWUGBXEe-Lz9cVRDpg1g" name="FileContent"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6LWUWBXEe-Lz9cVRDpg1g" name="AudioCollectionRequest">
+        <ownedAttribute xmi:id="_R6LWUmBXEe-Lz9cVRDpg1g" name="Count">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6LWU2BXEe-Lz9cVRDpg1g" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6LWVGBXEe-Lz9cVRDpg1g" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_R6LWVWBXEe-Lz9cVRDpg1g" name="Size">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6LWVmBXEe-Lz9cVRDpg1g" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6LWV2BXEe-Lz9cVRDpg1g" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6JhImBXEe-Lz9cVRDpg1g" name="contracts">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6JhI2BXEe-Lz9cVRDpg1g" name="IUserDB">
+        <ownedOperation xmi:id="_R6JhJGBXEe-Lz9cVRDpg1g" name="addUser">
+          <ownedParameter xmi:id="_R6JhJWBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6JhJmBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6JhJ2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6JhKGBXEe-Lz9cVRDpg1g" name="getUserData">
+          <ownedParameter xmi:id="_R6JhKWBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6JhKmBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6JhK2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6JhLGBXEe-Lz9cVRDpg1g" name="IDownload">
+        <ownedOperation xmi:id="_R6JhLWBXEe-Lz9cVRDpg1g" name="download">
+          <ownedParameter xmi:id="_R6JhLmBXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUWBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6JhL2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6JhMGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6JhMWBXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6JhMmBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6JhM2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6JhNGBXEe-Lz9cVRDpg1g" name="IMediaAccess">
+        <ownedOperation xmi:id="_R6JhNWBXEe-Lz9cVRDpg1g" name="upload">
+          <ownedParameter xmi:id="_R6JhNmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIMGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIMWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KIMmBXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIM2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KINGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KINWBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_R6KINmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIN2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIOGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6KIOWBXEe-Lz9cVRDpg1g" name="IPackaging">
+        <ownedOperation xmi:id="_R6KIOmBXEe-Lz9cVRDpg1g" name="zip">
+          <ownedParameter xmi:id="_R6KIO2BXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIPGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIPWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KIPmBXEe-Lz9cVRDpg1g" name="audios" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIP2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIQGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6KIQWBXEe-Lz9cVRDpg1g" name="IMediaManagement">
+        <ownedOperation xmi:id="_R6KIQmBXEe-Lz9cVRDpg1g" name="upload">
+          <ownedParameter xmi:id="_R6KIQ2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIRGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIRWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KIRmBXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIR2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KISGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KISWBXEe-Lz9cVRDpg1g" name="download">
+          <ownedParameter xmi:id="_R6KISmBXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIS2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KITGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KITWBXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KITmBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIT2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KIUGBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_R6KIUWBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KIUmBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KIU2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6KIVGBXEe-Lz9cVRDpg1g" name="IFacade">
+        <ownedOperation xmi:id="_R6KIVWBXEe-Lz9cVRDpg1g" name="upload">
+          <ownedParameter xmi:id="_R6KvQGBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvQWBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvQmBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KvQ2BXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvRGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvRWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvRmBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_R6KvR2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvSGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvSWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvSmBXEe-Lz9cVRDpg1g" name="register">
+          <ownedParameter xmi:id="_R6KvS2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvTGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvTWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvTmBXEe-Lz9cVRDpg1g" name="login">
+          <ownedParameter xmi:id="_R6KvT2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvUGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvUWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvUmBXEe-Lz9cVRDpg1g" name="download">
+          <ownedParameter xmi:id="_R6KvU2BXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvVGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvVWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KvVmBXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvV2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvWGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6KvWWBXEe-Lz9cVRDpg1g" name="IDB">
+        <ownedOperation xmi:id="_R6KvWmBXEe-Lz9cVRDpg1g" name="query">
+          <ownedParameter xmi:id="_R6KvW2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvXGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvXWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvXmBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_R6KvX2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvYGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvYWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6KvYmBXEe-Lz9cVRDpg1g" name="IFileStorage">
+        <ownedOperation xmi:id="_R6KvY2BXEe-Lz9cVRDpg1g" name="getFiles">
+          <ownedParameter xmi:id="_R6KvZGBXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvZWBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvZmBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KvZ2BXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvaGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvaWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvamBXEe-Lz9cVRDpg1g" name="storeFile">
+          <ownedParameter xmi:id="_R6Kva2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvbGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvbWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_R6KvbmBXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6Kvb2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvcGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_R6KvcWBXEe-Lz9cVRDpg1g" name="IUserManagement">
+        <ownedOperation xmi:id="_R6KvcmBXEe-Lz9cVRDpg1g" name="register">
+          <ownedParameter xmi:id="_R6Kvc2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KvdGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KvdWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_R6KvdmBXEe-Lz9cVRDpg1g" name="login">
+          <ownedParameter xmi:id="_R6Kvd2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R6KveGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R6KveWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6LWWGBXEe-Lz9cVRDpg1g" name="userDBAdapter">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6LWWWBXEe-Lz9cVRDpg1g" name="UserDBAdapterImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6LWWmBXEe-Lz9cVRDpg1g" name="Required_IDB_UserDBAdapter" type="_R6KvWWBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6LWW2BXEe-Lz9cVRDpg1g" name="Provided_IUserDB_UserDBAdapter" client="_R6LWWWBXEe-Lz9cVRDpg1g" supplier="_R6JhI2BXEe-Lz9cVRDpg1g" contract="_R6JhI2BXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6LWXGBXEe-Lz9cVRDpg1g" name="UserDBAdapterImpl">
+          <ownedParameter xmi:id="_R6LWXWBXEe-Lz9cVRDpg1g" name="Required_IDB_UserDBAdapter" type="_R6KvWWBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6LWXmBXEe-Lz9cVRDpg1g" name="audioWatermarking">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6LWX2BXEe-Lz9cVRDpg1g" name="AudioWatermarkingImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6LWYGBXEe-Lz9cVRDpg1g" name="Required_IDownload_AudioWatermarking" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6LWYWBXEe-Lz9cVRDpg1g" name="Provided_IDownload_AudioWatermarking" client="_R6LWX2BXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6LWYmBXEe-Lz9cVRDpg1g" name="AudioWatermarkingImpl">
+          <ownedParameter xmi:id="_R6LWY2BXEe-Lz9cVRDpg1g" name="Required_IDownload_AudioWatermarking" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6LWZGBXEe-Lz9cVRDpg1g" name="reencoding">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6LWZWBXEe-Lz9cVRDpg1g" name="ReencodingImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6LWZmBXEe-Lz9cVRDpg1g" name="Required_IDownload_Reencoding" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6LWZ2BXEe-Lz9cVRDpg1g" name="Provided_IDownload_Reencoding" client="_R6LWZWBXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6LWaGBXEe-Lz9cVRDpg1g" name="ReencodingImpl">
+          <ownedParameter xmi:id="_R6LWaWBXEe-Lz9cVRDpg1g" name="Required_IDownload_Reencoding" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6LWamBXEe-Lz9cVRDpg1g" name="mediaManagement">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6LWa2BXEe-Lz9cVRDpg1g" name="MediaManagementImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6LWbGBXEe-Lz9cVRDpg1g" name="Required_IDownload_MediaManagement" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedAttribute xmi:id="_R6LWbWBXEe-Lz9cVRDpg1g" name="Required_IPackaging_MediaManagement" type="_R6KIOWBXEe-Lz9cVRDpg1g"/>
+        <ownedAttribute xmi:id="_R6L9YGBXEe-Lz9cVRDpg1g" name="Required_IMediaAccess_MediaManagement" type="_R6JhNGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9YWBXEe-Lz9cVRDpg1g" name="Provided_IMediaManagement_MediaManagement" client="_R6LWa2BXEe-Lz9cVRDpg1g" supplier="_R6KIQWBXEe-Lz9cVRDpg1g" contract="_R6KIQWBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9YmBXEe-Lz9cVRDpg1g" name="MediaManagementImpl">
+          <ownedParameter xmi:id="_R6L9Y2BXEe-Lz9cVRDpg1g" name="Required_IDownload_MediaManagement" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+          <ownedParameter xmi:id="_R6L9ZGBXEe-Lz9cVRDpg1g" name="Required_IPackaging_MediaManagement" type="_R6KIOWBXEe-Lz9cVRDpg1g"/>
+          <ownedParameter xmi:id="_R6L9ZWBXEe-Lz9cVRDpg1g" name="Required_IMediaAccess_MediaManagement" type="_R6JhNGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9ZmBXEe-Lz9cVRDpg1g" name="facade">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9Z2BXEe-Lz9cVRDpg1g" name="FacadeImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6L9aGBXEe-Lz9cVRDpg1g" name="Required_IMediaManagement_Facade" type="_R6KIQWBXEe-Lz9cVRDpg1g"/>
+        <ownedAttribute xmi:id="_R6L9aWBXEe-Lz9cVRDpg1g" name="Required_IUserDB_Facade" type="_R6KvcWBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9amBXEe-Lz9cVRDpg1g" name="Provided_IWebGui_Facade" client="_R6L9Z2BXEe-Lz9cVRDpg1g" supplier="_R6KIVGBXEe-Lz9cVRDpg1g" contract="_R6KIVGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9a2BXEe-Lz9cVRDpg1g" name="FacadeImpl">
+          <ownedParameter xmi:id="_R6L9bGBXEe-Lz9cVRDpg1g" name="Required_IMediaManagement_Facade" type="_R6KIQWBXEe-Lz9cVRDpg1g"/>
+          <ownedParameter xmi:id="_R6L9bWBXEe-Lz9cVRDpg1g" name="Required_IUserDB_Facade" type="_R6KvcWBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9bmBXEe-Lz9cVRDpg1g" name="mediaAccess">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9b2BXEe-Lz9cVRDpg1g" name="MediaAccessImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6L9cGBXEe-Lz9cVRDpg1g" name="Required_IDB_MediaAccess" type="_R6KvWWBXEe-Lz9cVRDpg1g"/>
+        <ownedAttribute xmi:id="_R6L9cWBXEe-Lz9cVRDpg1g" name="Required_IDataStorage_MediaAccess" type="_R6KvYmBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9cmBXEe-Lz9cVRDpg1g" name="Provided_IMediaAccess_MediaAccess" client="_R6L9b2BXEe-Lz9cVRDpg1g" supplier="_R6JhNGBXEe-Lz9cVRDpg1g" contract="_R6JhNGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9c2BXEe-Lz9cVRDpg1g" name="Provided_IDownload_MediaAccess" client="_R6L9b2BXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9dGBXEe-Lz9cVRDpg1g" name="MediaAccessImpl">
+          <ownedParameter xmi:id="_R6L9dWBXEe-Lz9cVRDpg1g" name="Required_IDB_MediaAccess" type="_R6KvWWBXEe-Lz9cVRDpg1g"/>
+          <ownedParameter xmi:id="_R6L9dmBXEe-Lz9cVRDpg1g" name="Required_IDataStorage_MediaAccess" type="_R6KvYmBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9d2BXEe-Lz9cVRDpg1g" name="packaging">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9eGBXEe-Lz9cVRDpg1g" name="PackagingImpl" isFinalSpecialization="true">
+        <interfaceRealization xmi:id="_R6L9eWBXEe-Lz9cVRDpg1g" name="Provided_IPackaging_Packaging" client="_R6L9eGBXEe-Lz9cVRDpg1g" supplier="_R6KIOWBXEe-Lz9cVRDpg1g" contract="_R6KIOWBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9emBXEe-Lz9cVRDpg1g" name="PackagingImpl"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9e2BXEe-Lz9cVRDpg1g" name="dB">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9fGBXEe-Lz9cVRDpg1g" name="DBImpl" isFinalSpecialization="true">
+        <interfaceRealization xmi:id="_R6L9fWBXEe-Lz9cVRDpg1g" name="Provided_IDB_DB" client="_R6L9fGBXEe-Lz9cVRDpg1g" supplier="_R6KvWWBXEe-Lz9cVRDpg1g" contract="_R6KvWWBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9fmBXEe-Lz9cVRDpg1g" name="DBImpl"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9f2BXEe-Lz9cVRDpg1g" name="fileStorage">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9gGBXEe-Lz9cVRDpg1g" name="FileStorageImpl" isFinalSpecialization="true">
+        <interfaceRealization xmi:id="_R6L9gWBXEe-Lz9cVRDpg1g" name="Provided_IDataStorage_DataStorage" client="_R6L9gGBXEe-Lz9cVRDpg1g" supplier="_R6KvYmBXEe-Lz9cVRDpg1g" contract="_R6KvYmBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9gmBXEe-Lz9cVRDpg1g" name="FileStorageImpl"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9g2BXEe-Lz9cVRDpg1g" name="tagWatermarking">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9hGBXEe-Lz9cVRDpg1g" name="TagWatermarkingImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6L9hWBXEe-Lz9cVRDpg1g" name="Required_IDownload_TagWatermarking" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9hmBXEe-Lz9cVRDpg1g" name="Provided_IDownload_TagWatermarking" client="_R6L9hGBXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9h2BXEe-Lz9cVRDpg1g" name="TagWatermarkingImpl">
+          <ownedParameter xmi:id="_R6L9iGBXEe-Lz9cVRDpg1g" name="Required_IDownload_TagWatermarking" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9iWBXEe-Lz9cVRDpg1g" name="cache">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9imBXEe-Lz9cVRDpg1g" name="CacheImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6L9i2BXEe-Lz9cVRDpg1g" name="Required_IDownload_Cache" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9jGBXEe-Lz9cVRDpg1g" name="Provided_IDownload_Cache" client="_R6L9imBXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9jWBXEe-Lz9cVRDpg1g" name="CacheImpl">
+          <ownedParameter xmi:id="_R6L9jmBXEe-Lz9cVRDpg1g" name="Required_IDownload_Cache" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6L9j2BXEe-Lz9cVRDpg1g" name="userManagement">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6L9kGBXEe-Lz9cVRDpg1g" name="UserManagementImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6L9kWBXEe-Lz9cVRDpg1g" name="Required_IUserDB_UserManagement" type="_R6JhI2BXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6L9kmBXEe-Lz9cVRDpg1g" name="Provided_IUserManagement_UserManagement" client="_R6L9kGBXEe-Lz9cVRDpg1g" supplier="_R6KvcWBXEe-Lz9cVRDpg1g" contract="_R6KvcWBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6L9k2BXEe-Lz9cVRDpg1g" name="UserManagementImpl">
+          <ownedParameter xmi:id="_R6L9lGBXEe-Lz9cVRDpg1g" name="Required_IUserDB_UserManagement" type="_R6JhI2BXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6MkcGBXEe-Lz9cVRDpg1g" name="downloadLoadBalancer">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6MkcWBXEe-Lz9cVRDpg1g" name="DownloadLoadBalancerImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6MkcmBXEe-Lz9cVRDpg1g" name="Required_IDownload_Replica2_DownloadLoadBalancer" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedAttribute xmi:id="_R6Mkc2BXEe-Lz9cVRDpg1g" name="Required_IDownload_Replica1_DownloadLoadBalancer" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6MkdGBXEe-Lz9cVRDpg1g" name="Provided_IDownload_DownloadLoadBalancer" client="_R6MkcWBXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6MkdWBXEe-Lz9cVRDpg1g" name="DownloadLoadBalancerImpl">
+          <ownedParameter xmi:id="_R6MkdmBXEe-Lz9cVRDpg1g" name="Required_IDownload_Replica2_DownloadLoadBalancer" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+          <ownedParameter xmi:id="_R6Mkd2BXEe-Lz9cVRDpg1g" name="Required_IDownload_Replica1_DownloadLoadBalancer" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R6MkeGBXEe-Lz9cVRDpg1g" name="parallelWatermarking">
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6MkeWBXEe-Lz9cVRDpg1g" name="ParallelWatermarkingImpl" isFinalSpecialization="true">
+        <ownedAttribute xmi:id="_R6MkemBXEe-Lz9cVRDpg1g" name="Required_IDownload_Watermarking" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <interfaceRealization xmi:id="_R6Mke2BXEe-Lz9cVRDpg1g" name="Provided_IDownload_Watermarking" client="_R6MkeWBXEe-Lz9cVRDpg1g" supplier="_R6JhLGBXEe-Lz9cVRDpg1g" contract="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        <ownedOperation xmi:id="_R6MkfGBXEe-Lz9cVRDpg1g" name="ParallelWatermarkingImpl">
+          <ownedParameter xmi:id="_R6MkfWBXEe-Lz9cVRDpg1g" name="Required_IDownload_Watermarking" type="_R6JhLGBXEe-Lz9cVRDpg1g"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_WFoDEGBXEe-Lz9cVRDpg1g" name="contracts">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDEWBXEe-Lz9cVRDpg1g" name="IUserDB">
+        <ownedOperation xmi:id="_WFoDEmBXEe-Lz9cVRDpg1g" name="addUser">
+          <ownedParameter xmi:id="_WFoDE2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDFGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDFWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDFmBXEe-Lz9cVRDpg1g" name="getUserData">
+          <ownedParameter xmi:id="_WFoDF2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDGGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDGWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDGmBXEe-Lz9cVRDpg1g" name="IDownload">
+        <ownedOperation xmi:id="_WFoDG2BXEe-Lz9cVRDpg1g" name="download">
+          <ownedParameter xmi:id="_WFoDHGBXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUWBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDHWBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDHmBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDH2BXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDIGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDIWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDImBXEe-Lz9cVRDpg1g" name="IMediaAccess">
+        <ownedOperation xmi:id="_WFoDI2BXEe-Lz9cVRDpg1g" name="upload">
+          <ownedParameter xmi:id="_WFoDJGBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDJWBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDJmBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDJ2BXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDKGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDKWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDKmBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_WFoDK2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDLGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDLWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDLmBXEe-Lz9cVRDpg1g" name="IPackaging">
+        <ownedOperation xmi:id="_WFoDL2BXEe-Lz9cVRDpg1g" name="zip">
+          <ownedParameter xmi:id="_WFoDMGBXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDMWBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDMmBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDM2BXEe-Lz9cVRDpg1g" name="audios" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDNGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDNWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDNmBXEe-Lz9cVRDpg1g" name="IMediaManagement">
+        <ownedOperation xmi:id="_WFoDN2BXEe-Lz9cVRDpg1g" name="upload">
+          <ownedParameter xmi:id="_WFoDOGBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDOWBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDOmBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDO2BXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDPGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDPWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDPmBXEe-Lz9cVRDpg1g" name="download">
+          <ownedParameter xmi:id="_WFoDP2BXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDQGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDQWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDQmBXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDQ2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDRGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDRWBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_WFoDRmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDR2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDSGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDSWBXEe-Lz9cVRDpg1g" name="IFacade">
+        <ownedOperation xmi:id="_WFoDSmBXEe-Lz9cVRDpg1g" name="upload">
+          <ownedParameter xmi:id="_WFoDS2BXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDTGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDTWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDTmBXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDT2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDUGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDUWBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_WFoDUmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDU2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDVGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDVWBXEe-Lz9cVRDpg1g" name="register">
+          <ownedParameter xmi:id="_WFoDVmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDV2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDWGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDWWBXEe-Lz9cVRDpg1g" name="login">
+          <ownedParameter xmi:id="_WFoDWmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDW2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDXGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDXWBXEe-Lz9cVRDpg1g" name="download">
+          <ownedParameter xmi:id="_WFoDXmBXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDX2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDYGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDYWBXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDYmBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDY2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDZGBXEe-Lz9cVRDpg1g" name="IDB">
+        <ownedOperation xmi:id="_WFoDZWBXEe-Lz9cVRDpg1g" name="query">
+          <ownedParameter xmi:id="_WFoDZmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDZ2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDaGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDaWBXEe-Lz9cVRDpg1g" name="getFileList">
+          <ownedParameter xmi:id="_WFoDamBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDa2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDbGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDbWBXEe-Lz9cVRDpg1g" name="IFileStorage">
+        <ownedOperation xmi:id="_WFoDbmBXEe-Lz9cVRDpg1g" name="getFiles">
+          <ownedParameter xmi:id="_WFoDb2BXEe-Lz9cVRDpg1g" name="returnParam" type="_R6LWUGBXEe-Lz9cVRDpg1g" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDcGBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDcWBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDcmBXEe-Lz9cVRDpg1g" name="audioRequest" type="_R6LWUWBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDc2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDdGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDdWBXEe-Lz9cVRDpg1g" name="storeFile">
+          <ownedParameter xmi:id="_WFoDdmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDd2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDeGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_WFoDeWBXEe-Lz9cVRDpg1g" name="file" type="_R6LWUGBXEe-Lz9cVRDpg1g">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDemBXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDe2BXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_WFoDfGBXEe-Lz9cVRDpg1g" name="IUserManagement">
+        <ownedOperation xmi:id="_WFoDfWBXEe-Lz9cVRDpg1g" name="register">
+          <ownedParameter xmi:id="_WFoDfmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDf2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDgGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_WFoDgWBXEe-Lz9cVRDpg1g" name="login">
+          <ownedParameter xmi:id="_WFoDgmBXEe-Lz9cVRDpg1g" name="returnParam" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WFoDg2BXEe-Lz9cVRDpg1g" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WFoDhGBXEe-Lz9cVRDpg1g" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
